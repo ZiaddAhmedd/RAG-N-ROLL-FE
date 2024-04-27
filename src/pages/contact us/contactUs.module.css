@@ -44,11 +44,11 @@
   align-items: center;
   cursor: pointer;
   border: 1px solid transparent;
-  border-image: linear-gradient(to right, var(--orange), var(--pink)) 1 / 2px;
+  border-image: linear-gradient(to right, var(--orange), var(--ligt-blue)) 1 / 2px;
   margin-top: 3rem;
   position: relative;
 
-  background: linear-gradient(to right, transparent 50%, var(--pink) 100%) left,
+  background: linear-gradient(to right, transparent 50%, var(--ligt-blue) 100%) left,
     linear-gradient(to right, transparent 50%, var(--orange) 50%) left;
 
   background-size: 200%;

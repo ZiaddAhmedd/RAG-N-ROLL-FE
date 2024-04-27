@@ -1,0 +1,8 @@
+.animate__backInDown.animate__bounce {
+  --animate-duration: 10s;
+}
+
+.hey {
+    background-color: white;
+    height: 95vh;
+}

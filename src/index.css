@@ -1,8 +1,10 @@
 :root {
   /* 3x Main colors */
-  --gradientFill: linear-gradient(to right bottom, #ef573f, #f900bf);
+  --gradientFill: linear-gradient(to right, #5cbfd7 , white);
   --orange: #ef573f;
-  --pink: #f900bf;
+  --light-blue: #5cbfd7;
+  --dark-blue: #063a53;
+  --blue: #1b7bff;
   --lime-green: #d7ff7b;
   --white: #ffffff;
   --gray: rgb(114, 117, 150);
@@ -12,7 +14,7 @@
   --cancelled: #fb3a5a;
   --inputBG: #ffffff15;
   /* 3x Font colors */
-  --primary-text: white;
+  --primary-text: black;
   --secondary-text: rgb(114, 117, 150);
   --errorText: #f900bfc8;
   --faded-grey: #a9a8b3;
@@ -137,7 +139,7 @@ button {
   align-items: center;
   cursor: pointer;
   border: 1px solid transparent;
-  border-image: linear-gradient(to right, var(--orange), var(--pink)) 1 / 2px;
+  border-image: linear-gradient(to right, var(--orange), var(--light-blue)) 1 / 2px;
   gap: 1.5rem;
   margin-top: 3rem;
   position: relative;
