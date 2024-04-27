@@ -1,0 +1,32 @@
+.title{
+    margin-top: 10rem;
+    color: var(--gradientFill);
+}
+.container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    overflow: hidden;
+}
+.containerbox
+{
+    width:83%;
+    margin: 1rem auto;
+}
+
+.container > hr {
+    height: 17rem;
+    border: none;
+}
+
+.pageLoader{
+    height: 82.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pageLoader > img{
+    height: 11rem;
+    aspect-ratio: 1;
+}

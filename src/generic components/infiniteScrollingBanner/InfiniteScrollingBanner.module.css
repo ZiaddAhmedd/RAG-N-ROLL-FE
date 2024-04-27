@@ -1,0 +1,46 @@
+.bannerWrapper {
+    overflow: hidden;
+    background-color: var(--pink);
+    color: var(--primary-background);
+    padding: .3rem;
+    font-size: var(--lengthM2);
+    font-weight: 600;
+}
+
+.scrollWrapper {
+    width: 200%;
+    overflow: hidden;
+    display: flex;
+}
+
+.scrollWrapper:hover .infiniteScrollingBanner {
+    animation-play-state: paused;
+}
+.infiniteScrollingBanner{
+    flex: 1;
+    /* height: 3rem; */
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    animation: scroll-x 10s linear infinite;
+}
+
+.infiniteScrollingBanner > p{
+    width: max-content;
+    flex: 1;
+}
+
+
+@keyframes scroll-x {
+    to {
+        transform: translate(-50%, 0);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .infiniteScrollingBanner > p:nth-child(even){
+        display: none;
+    }
+}
+
+  

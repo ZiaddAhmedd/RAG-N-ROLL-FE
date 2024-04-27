@@ -1,0 +1,50 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-block: 5rem;
+}
+
+.info{
+    flex-basis: 50%;
+    text-align: center;
+}
+.info>svg{
+    margin-bottom: 2rem;
+}
+.info>h1{
+    font-size: var(--lengthL2);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.address>h3{
+    font-size: var(--lengthM2);
+    padding-block: 1rem;
+    font-weight: 600;
+}
+
+.address>p{
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    font-weight: 300;
+}   
+
+.image{
+    width: 30vw;
+    height: 75vh;
+}
+.image>img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+    .image{
+        display: none;
+    }
+    .info{
+        flex-basis: 100%;
+    }
+}

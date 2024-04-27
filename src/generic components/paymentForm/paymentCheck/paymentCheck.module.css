@@ -1,0 +1,26 @@
+.paymentCheck {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+
+  color: var(--primary-text);
+  font-size: var(--lengthM2);
+  text-transform: capitalize;
+}
+
+.paymentCheck > li{
+    width: 100%;
+    padding-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.paymentCheck > li:not(:last-child){
+    border-bottom: 1px solid var(--placeHolder);
+}
+.paymentCheck > li > p{
+    flex-basis: 15%; 
+    min-width: max-content;
+}
