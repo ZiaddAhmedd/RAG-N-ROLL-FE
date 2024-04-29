@@ -1,8 +1,8 @@
 import "animate.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Skeleton from "react-skeleton-loader";
 // import Typewriter from "typewriter-effect";
-import { ReactTyped, Type } from "react-typed";
+import { ReactTyped } from "react-typed";
 import logo from "../../assets/imgs/logo.png";
 import sendBtn from "../../assets/imgs/send.png";
 import "./animations.css";
@@ -54,13 +54,16 @@ const QueryPage = () => {
             )}
             {skeleton && (
               <div className="animate__animated animate__fadeInUp">
-                <Skeleton
-                  count={4}
-                  animated={true}
-                  color="#5cbfd7"
-                  width="50rem"
-                  widthRandomness={0.3}
-                />
+                <div className={classes.response}>
+                  <img id="RagLogo" src={logo} alt="" data-rotate={rotate} />
+                  <Skeleton
+                    count={4}
+                    animated={true}
+                    color="#5cbfd7"
+                    width="50rem"
+                    widthRandomness={0.3}
+                  />
+                </div>
               </div>
             )}
             {showText && (
