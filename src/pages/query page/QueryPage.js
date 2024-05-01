@@ -1,5 +1,5 @@
 import "animate.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, MenuItem, Sidebar, SubMenu } from "react-pro-sidebar";
 import Skeleton from "react-skeleton-loader";
 import { Link } from "react-router-dom";
@@ -35,13 +35,22 @@ const QueryPage = () => {
     setOpen(true);
     setTimeout(() => {
       setSkeleton(true);
-      setTimeout(() => {
-        setSkeleton(false);
-        setShowText(true);
-        setRotate(true);
-      }, 9000);
+      // setTimeout(() => {
+      //   setSkeleton(false);
+      //   setShowText(true);
+      //   setRotate(true);
+      // }, 9000);
+
     }, 1000);
   }
+  useEffect(() => {
+    console.log(output);
+    if(output){
+      setSkeleton(false);
+      setShowText(true);
+      setRotate(true);
+    }
+  }, [output]);
 
   async function sendData(queryInput) {
     try {
@@ -49,7 +58,7 @@ const QueryPage = () => {
         query: queryInput,
       });
       console.log(response);
-      setOutput(response.docs[0]);
+      setOutput(response.data.docs[0]);
 
     } catch (err) {
     }
