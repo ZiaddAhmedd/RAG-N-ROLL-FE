@@ -6,16 +6,6 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../assets/imgs/logo.png";
 
 const HomePage = () => {
-  useEffect(() => {
-    getHomeProducts();
-  }, []);
-  async function getHomeProducts() {
-    try {
-      const response = await axios.get(
-        routes.getHomeProducts + "?isHomepage=true"
-      );
-    } catch (err) {}
-  }
 
   return (
     <>
