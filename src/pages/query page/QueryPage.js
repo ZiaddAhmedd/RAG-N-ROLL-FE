@@ -169,7 +169,7 @@ const QueryPage = () => {
               <div className={classes.response}>
                 <img id="RagLogo" src={logo} alt="" data-rotate={rotate} />
                 <ReactTyped
-                  strings={[doc]}
+                  strings={[output]}
                   typeSpeed={1}
                   onComplete={(self) => {
                     setRotate(false);
