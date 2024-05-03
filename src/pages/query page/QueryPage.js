@@ -32,7 +32,7 @@ const QueryPage = () => {
       return;
     }
     setQuery(queryInput.value);
-    sendData(query);
+    sendData(queryInput.value);
     queryInput.value = "";
     queryInput.blur();
     setOpen(true);
