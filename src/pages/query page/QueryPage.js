@@ -57,8 +57,22 @@ const QueryPage = () => {
     try {
       const response = await axios.post(routes.retrieve, {
         query: queryInput,
+      }).then((res) => {
+        setOutput(res.data.docs[0]);
+        getAnswer(queryInput, res.data.docs[0]);
       });
-      setOutput(response.data.docs[0]);
+        
+    } catch (err) {}
+  }
+
+  async function getAnswer(queryInput, doc) {
+    console.log("inside getAnswer: " + queryInput + " " + doc);
+    try {
+      const response = await axios.post(routes.QAResponse, {
+        query: queryInput,
+        doc: doc,
+      });
+      console.log(response.data);
     } catch (err) {}
   }
 
