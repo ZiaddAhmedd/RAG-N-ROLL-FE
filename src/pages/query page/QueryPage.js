@@ -275,8 +275,6 @@ const QueryPage = () => {
           </div>
           )}
           <div className={classes.content}>
-            {queryAnimation && (
-              <div className={classes.response}>
                 {queryAnimation && (
                   <div className={classes.person}>
                     <div className={classes.personLogo}>👨‍💻</div>
@@ -292,6 +290,9 @@ const QueryPage = () => {
                     </p>
                   </div>
                 )}
+            {queryAnimation && (<>
+              <p className={classes.subHeader}>Document</p>
+              <div className={classes.response}>
                 {false && (
                   <div className="animate__animated animate__fadeInUp">
                     <div className={classes.itemFlex}>
@@ -310,6 +311,7 @@ const QueryPage = () => {
                       />
                     </div>
                   </div>
+                  
                 )}
                 {/* { queryAnimation && ( */}
                 {true && (
@@ -326,44 +328,51 @@ const QueryPage = () => {
                   </div>
                 )}
               </div>
+            </>
             )}
             {queryAnimation && (
-              <div className={classes.answerWrapper}>
-                <ReactTyped
-                  strings={["right answer"]}
-                  typeSpeed={1}
-                  onComplete={(self) => {
-                    setRotate(false);
-                    self.cursor.remove();
-                  }}
-                />
-              </div>
+              <>
+                <p className={classes.subHeader}>Answer</p>
+                <div className={classes.answerWrapper}>
+                  <ReactTyped
+                    strings={["right answer"]}
+                    typeSpeed={1}
+                    onComplete={(self) => {
+                      setRotate(false);
+                      self.cursor.remove();
+                    }}
+                  />
+                </div>
+              </>
             )}
           </div>
         </div>
             {queryAnimation && (
+          <>
+          <p className={classes.subHeader}>Images</p>
           <div className={classes.list}>
-          <AliceCarousel
-            className={classes.carousel}
-            mouseTracking 
-            items={images?.map((image) => (
-              <img src={image.link} alt={image.link} className={classes.carouselImg} />
-            ))}
-            responsive={{
-              0: {
-                items: 1,
-                itemsFit: 'fill'
-              },
-              1024: {
-                items: 4,
-                itemsFit: 'fill',
-              }
-            }}
-            renderDotsItem={(e) => { return <div className={e.isActive ? classes.carouselIndexBtnActive : classes.carouselIndexBtn}></div> }}
-            renderPrevButton={(e) => { return <ArrowBackIosNewIcon className={e.isDisabled ? classes.carouseLBtnDis : classes.carouseLBtn} /> }}
-            renderNextButton={(e) => { return <ArrowForwardIosIcon className={e.isDisabled ? classes.carouselRtnDis : classes.carouselRBtn} /> }}
-          />
-          </div>
+            <AliceCarousel
+              className={classes.carousel}
+              mouseTracking 
+              items={images?.map((image) => (
+                <img src={image.link} alt={image.link} className={classes.carouselImg} />
+              ))}
+              responsive={{
+                0: {
+                  items: 1,
+
+                },
+                1024: {
+                  items: 3,
+                  itemsFit: 'contain',
+                }
+              }}
+              renderDotsItem={(e) => { return <div className={e.isActive ? classes.carouselIndexBtnActive : classes.carouselIndexBtn}></div> }}
+              renderPrevButton={(e) => { return <ArrowBackIosNewIcon className={e.isDisabled ? classes.carouseLBtnDis : classes.carouseLBtn} /> }}
+              renderNextButton={(e) => { return <ArrowForwardIosIcon className={e.isDisabled ? classes.carouselRtnDis : classes.carouselRBtn} /> }}
+            />
+            </div>
+          </>
         )}
         </div>
       </div>

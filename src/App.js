@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/home/homePage";
 import InfiniteScrollingBanner from "./generic components/infiniteScrollingBanner/InfiniteScrollingBanner";
 import QueryPage from "./pages/query page/QueryPage";
+import "./App.css";
 
 function App() {
   return (

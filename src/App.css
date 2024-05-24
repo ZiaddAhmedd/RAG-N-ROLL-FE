@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
 }
+.alice-carousel {
+  text-align: center !important;
+}
 .infiniteScroll {
   height: 3.5vh;
 }

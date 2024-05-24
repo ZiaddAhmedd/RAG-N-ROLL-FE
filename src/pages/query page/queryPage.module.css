@@ -5,13 +5,13 @@
   position: relative;
   isolation: isolate;
   display: flex;
-  top: 3.5vh;
+  top: 0;
 }
 
 .scrollToBottom {
   position: absolute;
-  top: 85vh;
-  right: 5vw;
+  top: 87vh;
+  right: 2vw;
   width: 6rem;
   height: 6rem;
   display: flex;
@@ -131,7 +131,7 @@
 .content {
   overflow: hidden;
   color: var(--font-color);
-  margin-top: 5rem;
+  margin-top: 2rem;
   font-size: 1.7rem;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -186,6 +186,15 @@
   object-fit: scale-down;
 }
 
+.subHeader {
+  font-size: 2rem;
+  color: var(--light-blue);
+  margin-bottom: 1rem;
+  width: clamp(50rem, 70%, 90rem);
+  padding-left: 2rem;
+  text-align: left;
+}
+
 .submitButton img:hover {
   transform: scale(1.1);
 }
@@ -193,8 +202,7 @@
   display: none;
 }
 .response {
-  margin-top: 2rem;
-  height: 70vh;
+  height: 60vh;
   overflow-y: auto;
   margin-bottom: 3rem;
   border: solid 0.2rem rgba(18, 130, 178, 0.2);
@@ -221,6 +229,7 @@
 }
 
 .person {
+  /* padding-left: 2.5rem; */
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -255,10 +264,10 @@
 }
 
 .list {
-  display: flex;
-  justify-content: center;
-  max-width: 70vw;
-  width: 70vw;
+  border-radius: 3rem;
+  border: solid 0.2rem rgba(18, 130, 178, 0.2);
+  max-width: 90rem;
+  padding: 3rem;
   height: 40rem;
   margin: auto;
   margin-bottom: 5rem;
@@ -270,10 +279,6 @@
   user-select: none;
 }
 
-.carousel{
-  width: 100%;
-  height: 100%;
-}
 
 .carouselImg {
   width: 25rem;
@@ -281,6 +286,9 @@
   object-fit:cover;
   border-radius: 1rem;
 
+}
+.alice-carousel {
+  text-align: center;
 }
 
 /* This is the css for alice carousel */
