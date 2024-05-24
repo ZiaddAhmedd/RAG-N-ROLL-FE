@@ -8,7 +8,6 @@ import Logo from "../../assets/imgs/logo.png";
 const HomePage = () => {
 
   return (
-    <>
       <div className={classes.container}>
         <div className={classes.leftSection}>
           <div className={classes.title}>RagN'Roll</div>
@@ -21,10 +20,9 @@ const HomePage = () => {
           </NavLink>
         </div>
         <div className={classes.rightSection}>
-          <img src={Logo} alt="boody3abeet"/>
+          <img src={Logo} alt="a"/>
         </div>
       </div>
-    </>
   );
 };
 

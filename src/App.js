@@ -4,16 +4,18 @@ import InfiniteScrollingBanner from "./generic components/infiniteScrollingBanne
 import QueryPage from "./pages/query page/QueryPage";
 
 function App() {
-
-
   return (
-    <>
-      <InfiniteScrollingBanner innerText="This is a test" />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/askQuestion" element={<QueryPage />} />
-      </Routes>
-    </>
+    <div className="RAGAPP">
+      <div className="infiniteScroll">
+        <InfiniteScrollingBanner innerText="This is a test" />
+      </div>
+      <div className="pages">
+        <Routes className="pages">
+          <Route path="/" element={<HomePage />} />
+          <Route path="/askQuestion" element={<QueryPage />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 

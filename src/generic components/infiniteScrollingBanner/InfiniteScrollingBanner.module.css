@@ -1,14 +1,15 @@
 .bannerWrapper {
     overflow: hidden;
+    height: 3.5vh;
     background-color: var(--light-blue);
     color: var(--white);
     padding: .3rem;
     font-size: var(--lengthM2);
     font-weight: 600;
-    position: absolute;
-    top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
+    top: 0;
+    position: fixed;
 }
 
 .scrollWrapper {

@@ -1,3 +1,13 @@
+.RAGAPP {
+  display: flex;
+  flex-direction: column;
+}
+.infiniteScroll {
+  height: 3.5vh;
+}
+.pages {
+  height: 96.5vh;
+}
 .App {
   text-align: center;
 }
