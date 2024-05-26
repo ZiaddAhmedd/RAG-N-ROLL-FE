@@ -48,14 +48,40 @@
   position: absolute;
   bottom: 0;
 }
-
-.menuIconWrapper {
+.SidebarContent {
   width: 100%;
-  display: flex;
   position: absolute;
   top: 1.5rem;
 }
 
+.menuIconWrapper {
+  width: 100%;
+  display: flex;
+}
+
+.configSec {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.configSec h4 {
+  color: var(--white);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.chooseQA {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.chooseQA span {
+  font-size: 1.5rem;
+  color: var(--light-blue);
+  font-weight: 250;
+}
 .menuIcon {
   color: var(--light-blue);
   font-size: 4rem !important;
@@ -238,12 +264,13 @@
 }
 
 .personLogo {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
-.person p {
-  font-size: 1.7rem;
-  color: var(--font-color);
+.person p { 
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 1px;
 }
@@ -265,6 +292,7 @@
 
 .list {
   border-radius: 3rem;
+  width: clamp(50rem, 70%, 90rem) !important;
   border: solid 0.2rem rgba(18, 130, 178, 0.2);
   max-width: 90rem;
   padding: 3rem;
@@ -286,9 +314,6 @@
   object-fit:cover;
   border-radius: 1rem;
 
-}
-.alice-carousel {
-  text-align: center;
 }
 
 /* This is the css for alice carousel */

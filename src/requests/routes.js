@@ -5,6 +5,6 @@ const routes = {
     retrieveIdsText: "/retrieveIdsText",
     retrieveActualText: "/retrieveActualText",
     QAResponse: "/QAResponse",
-
+    retrieveImgs: "/retrieveImgs",
 }
 export default routes 

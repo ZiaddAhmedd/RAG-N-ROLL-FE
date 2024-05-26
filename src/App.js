@@ -3,6 +3,8 @@ import HomePage from "./pages/home/homePage";
 import InfiniteScrollingBanner from "./generic components/infiniteScrollingBanner/InfiniteScrollingBanner";
 import QueryPage from "./pages/query page/QueryPage";
 import "./App.css";
+import "react-toggle/style.css"
+
 
 function App() {
   return (

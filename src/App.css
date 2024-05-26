@@ -5,6 +5,11 @@
 .alice-carousel {
   text-align: center !important;
 }
+
+.react-toggle--checked .react-toggle-track {
+  background-color: var(--dark-blue) !important;
+}
+
 .infiniteScroll {
   height: 3.5vh;
 }
