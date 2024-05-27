@@ -149,7 +149,6 @@ const QueryPage = () => {
         <Tooltip id="my-tooltip" style={{zIndex:1000, padding:'1rem', fontSize:'1.2rem'}} offset={20}/>
         <Sidebar
           backgroundColor=""
-          breakPoint="md"
           collapsed={openSideBar}
           rootStyles={{
             height: "96.5vh",
