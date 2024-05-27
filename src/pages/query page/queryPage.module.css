@@ -267,7 +267,7 @@
   display: none;
 }
 .response {
-  height: 70vh;
+  height: 58vh;
   overflow-y: auto;
   margin-bottom: 3rem;
   border: solid 0.2rem rgba(18, 130, 178, 0.2);

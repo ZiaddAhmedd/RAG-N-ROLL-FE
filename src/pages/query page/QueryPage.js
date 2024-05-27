@@ -228,7 +228,7 @@ const QueryPage = () => {
           </Menu>
         </Sidebar>
         <div className={classes.container}>
-          {images.length && scrolledBottom && false && (
+          {images.length && scrolledBottom && (
             <button className={classes.scrollToBottom} onClick={scrollToBottom}>
               <ImageIcon sx={{ fontSize: "30px" }} />
             </button>
