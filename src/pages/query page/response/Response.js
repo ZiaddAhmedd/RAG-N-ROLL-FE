@@ -9,14 +9,9 @@ import { useEffect, useState } from "react";
 function Response(props) {
     const [answer, setAnswer] = useState("");
 
-    const ourScript = `In today's data-driven world, organizations are drowning in vast amounts of information. Finding the right answers quickly can be like searching for a needle in a haystack, especially when dealing with sensitive data.
-    Introducing our innovative RAG model for question answering. Our solution leverages both text and image data, ensuring comprehensive and accurate information retrieval. With no hallucinations, our extractive QA model provides precise and reliable answers every time.
-    Choose between our classical model or the advanced BERT model for question answering, tailored to your needs. And the best part? Our product requires minimal resources and can be hosted on your local servers, ensuring data security and privacy.
-    Empower your organization to make informed decisions quickly and confidently. Discover the future of data retrieval and question answering with our cutting-edge RAG model. The future is in your hands.`
-
     function renderDoc(doc) {
         if (!props.queryAnimation) return;
-        if (doc === "hey" && false) {
+        if (doc === "hey") {
           return (
             <div className="animate__animated animate__fadeInUp">
             <div className={classes.itemFlex}>
@@ -37,14 +32,13 @@ function Response(props) {
           </div>
           );
         }
-        if (doc && props.id === 0 && props.firstDocAnimation || true) {
+        if (doc && props.id === 0 && props.firstDocAnimation) {
           return (
             <div className={classes.itemFlex}>
             <img id="RagLogo" src={props.logo} alt="" data-rotate={props.rotate} />
             <ReactTyped
-              strings={[ourScript]}
-              startDelay={2000}
-              typeSpeed={40}
+              strings={[props.doc]}
+              typeSpeed={1}
               onComplete={(self) => {
                 props.setRotate(false);
                 self.cursor.remove();
@@ -52,7 +46,6 @@ function Response(props) {
             />
           </div>
           );
-
         }
         return (
             <div className={classes.itemFlex}>
@@ -90,7 +83,7 @@ function Response(props) {
               </div>
             </>
             )}
-            {(props.queryAnimation && false) && (
+            {props.queryAnimation && (
               <>
                 <p className={classes.subHeader}>Answer</p>
                 <div className={classes.answerWrapper}>

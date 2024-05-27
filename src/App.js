@@ -9,9 +9,9 @@ import "react-toggle/style.css"
 function App() {
   return (
     <div className="RAGAPP">
-      {/* <div className="infiniteScroll">
+      <div className="infiniteScroll">
         <InfiniteScrollingBanner innerText="Let's Roll" />
-      </div> */}
+      </div>
       <div className="pages">
         <Routes className="pages">
           <Route path="/" element={<HomePage />} />

@@ -138,7 +138,7 @@ const QueryPage = () => {
       className="animate__animated animate__bounceInDown"
       style={{ width: "100%" }}
     >
-      {/* <MyToaster /> */}
+      <MyToaster />
 
       <div className={classes.page}>
         <Tooltip id="my-tooltip" style={{zIndex:1000, padding:'1rem', fontSize:'1.2rem'}} offset={20}/>
@@ -146,8 +146,8 @@ const QueryPage = () => {
           backgroundColor=""
           collapsed={openSideBar}
           rootStyles={{
-            height: "100vh",
-            top: "0",
+            height: "96.5vh",
+            top: "3.5vh",
             borderRight: "1px solid #5cbfd7",
             borderRadius: !openSideBar ? "0 3rem 3rem 0" : "0",
             zIndex: "0",
@@ -260,8 +260,8 @@ const QueryPage = () => {
                   <div className={classes.personLogo}>👨‍💻</div>
                   <p>
                     <ReactTyped
-                      strings={["What is RAG N' Roll?"]}
-                      typeSpeed={50}
+                      strings={[query]}
+                      typeSpeed={25}
                       onComplete={(self) => {
                         setSkeleton(true);
                         self.cursor.remove();
@@ -306,7 +306,7 @@ const QueryPage = () => {
               )}
             </div>
           </div>
-          {(images.length && false)&& (
+          {images.length && (
           <>
           <p className={classes.subHeader}>Images</p>
           <div className={classes.list}>
