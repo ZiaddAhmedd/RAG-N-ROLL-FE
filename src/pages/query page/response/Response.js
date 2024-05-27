@@ -9,10 +9,9 @@ import { useEffect, useState } from "react";
 function Response(props) {
     const [answer, setAnswer] = useState("");
 
-    const ourScript = `In today's data-driven world, organizations are drowning in vast amounts of information. Finding the right answers quickly can be like searching for a needle in a haystack, especially when dealing with sensitive data.
-    Introducing our innovative RAG model for question answering. Our solution leverages both text and image data, ensuring comprehensive and accurate information retrieval. With no hallucinations, our extractive QA model provides precise and reliable answers every time.
-    Choose between our classical model or the advanced BERT model for question answering, tailored to your needs. And the best part? Our product requires minimal resources and can be hosted on your local servers, ensuring data security and privacy.
-    Empower your organization to make informed decisions quickly and confidently. Discover the future of data retrieval and question answering with our cutting-edge RAG model. The future is in your hands.`
+    const ourScript = [`Allow me to introduce myself – I'm Rag N' Roll, your innovative RAG model for question answering. I'm designed to seamlessly handle both text and image data, ensuring I provide you with comprehensive and accurate information retrieval. With my extractive QA model, rest assured there are no hallucinations – just precise and reliable answers, tailored to your needs.`
+    ,`You have the flexibility to choose between my classical model or the advanced BERT model, each optimized to enhance your question-answering experience. And here's the kicker: I'm lightweight and can operate on your local machines, ensuring your data's security and privacy are always top-notch.`
+    ,`Empower your organization to make swift and confident decisions with my assistance. Let's embark on this journey together and unlock the future of data retrieval and question answering. Remember, with Rag N' Roll, the future is right at your fingertips.`]
 
     function renderDoc(doc) {
         if (!props.queryAnimation) return;
@@ -42,7 +41,7 @@ function Response(props) {
             <div className={classes.itemFlex}>
             <img id="RagLogo" src={props.logo} alt="" data-rotate={props.rotate} />
             <ReactTyped
-              strings={[ourScript]}
+              strings={ourScript}
               startDelay={2000}
               typeSpeed={40}
               onComplete={(self) => {
