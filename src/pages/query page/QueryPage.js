@@ -146,7 +146,7 @@ const QueryPage = () => {
       <MyToaster />
 
       <div className={classes.page}>
-        <Tooltip id="my-tooltip" style={{zIndex:1000}}/>
+        <Tooltip id="my-tooltip" style={{zIndex:1000, padding:'1rem', fontSize:'1.2rem'}} offset={20}/>
         <Sidebar
           backgroundColor=""
           breakPoint="md"
@@ -278,6 +278,7 @@ const QueryPage = () => {
                 </>)}
               {queryAnimation && (
                 <div className={classes.responseWrapper}>
+                  <Tooltip id="switch-tooltip" style={{zIndex:10}} place="top-start"/>
                   {output?.map((doc, idx) =>
                     // check if the current document index is equal to the current index
                     currentDocIdx === idx ? (
@@ -297,12 +298,16 @@ const QueryPage = () => {
                       />
                     ) : null
                   )}
-                  <button onClick={() => setCurrentDocIdx(currentDocIdx - 1)} disabled={currentDocIdx === 0}>
+                  <div className={classes.switchingButtons}>
+                  <button onClick={() => setCurrentDocIdx(currentDocIdx - 1)} 
+                   data-tooltip-id="switch-tooltip" data-tooltip-content="Another Response">
                     <ArrowBackIosNewIcon className={currentDocIdx === 0? classes.carouseLBtnDis: classes.carouseLBtn}/>
                   </button>
-                  <button onClick={() => setCurrentDocIdx(currentDocIdx + 1)} disabled={currentDocIdx === output.length - 1}>
+                  <button onClick={() => setCurrentDocIdx(currentDocIdx + 1)} disabled={currentDocIdx === output.length - 1}
+                   data-tooltip-id="switch-tooltip" data-tooltip-content="Another Response">
                     <ArrowForwardIosIcon className={currentDocIdx === output.length - 1 ? classes.carouselRBtnDis : classes.carouselRBtn}/>
                   </button>
+                  </div>
                 </div>
               )}
             </div>

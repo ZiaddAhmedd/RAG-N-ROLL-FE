@@ -329,6 +329,16 @@
   min-height: 7rem;
 }
 
+.switchingButtons {
+  position: absolute;
+  width: 10rem;
+  right: 0rem;
+  top: 0rem;
+  display: flex;
+  gap:2rem
+
+}
+
 .list {
   border-radius: 3rem;
   width: clamp(50rem, 70%, 90rem) !important;
@@ -374,7 +384,6 @@
 .carouselRBtn,
 .carouseLBtnDis,
 .carouselRBtnDis {
-  position: absolute;
   fill: var(--white);
   color: var(--white);
   border: solid var(--white) 2px;
@@ -383,16 +392,7 @@
   margin: auto;
   font-size: 3.5rem !important;
 }
-.carouselRBtn, .carouselRBtnDis {
-  position: absolute;
-  top: 0;
-  right: 1rem;
-}
-.carouseLBtn, .carouseLBtnDis {
-  position: absolute;
-  top: 0;
-  right: 6rem;
-}
+
 .carouseLBtn:hover,
 .carouselRBtn:hover {
   opacity: 0.8;
