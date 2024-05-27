@@ -68,8 +68,10 @@
 }
 .configSec h4 {
   color: var(--white);
+  font-size: 1.7rem;
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .chooseQA {
@@ -78,7 +80,7 @@
   gap: 1rem;
 }
 .chooseQA span {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--light-blue);
   font-weight: 250;
 }
@@ -205,6 +207,38 @@
   align-items: center;
   border-radius: 50%;
 }
+.newQuestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* margin-left: 1.5rem; */
+  margin-bottom: 4rem;
+}
+.newQuestion a{
+  width: 100%;
+  background-color: var(--light-blue);
+  padding: 1.3rem;
+  padding-left: 2.7rem;
+  color: var(--white);
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  top: 2rem;
+  right: 2rem;
+}
+
+.newQuestionSmall {
+  background-color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--white);
+  width: 60%;
+  aspect-ratio: 1/1;
+  margin: auto;
+}
 
 .submitButton img {
   width: 70%;
@@ -224,11 +258,14 @@
 .submitButton img:hover {
   transform: scale(1.1);
 }
+.responseWrapper {
+  position: relative;
+}
 .response::-webkit-scrollbar {
   display: none;
 }
 .response {
-  height: 60vh;
+  height: 58vh;
   overflow-y: auto;
   margin-bottom: 3rem;
   border: solid 0.2rem rgba(18, 130, 178, 0.2);
@@ -236,6 +273,7 @@
   padding: 2.5rem;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  position: relative;
 }
 
 .itemFlex {
@@ -279,7 +317,7 @@
   border-radius: 3rem;
   border: solid 0.2rem rgba(18, 130, 178, 0.2);
   height: fit-content;
-  padding-block: 2.5rem;
+  padding-block: 2rem;
   background-color: rgba(12, 12, 12, 0.5);
   color: white;
   margin-bottom: 5rem;
@@ -288,6 +326,7 @@
   padding-left: 5rem;
   font-size: var(--lengthM3);
   box-shadow: rgba(50, 49, 49, 0.504) 50px ;
+  min-height: 7rem;
 }
 
 .list {
@@ -334,44 +373,45 @@
 .carouseLBtn,
 .carouselRBtn,
 .carouseLBtnDis,
-.carouselRtnDis {
+.carouselRBtnDis {
   position: absolute;
-  /* top: 40%; */
-  fill: var(--green);
-  color: var(--green);
-  border: solid var(--green) 2px;
-  border-radius: 100%;
+  fill: var(--white);
+  color: var(--white);
+  border: solid var(--white) 2px;
+  border-radius: 5px;
   padding: 0.5rem;
   margin: auto;
   font-size: 3.5rem !important;
 }
-
+.carouselRBtn, .carouselRBtnDis {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+.carouseLBtn, .carouseLBtnDis {
+  position: absolute;
+  top: 0;
+  right: 6rem;
+}
 .carouseLBtn:hover,
 .carouselRBtn:hover {
   opacity: 0.8;
   cursor: pointer;
 }
-.carouseLBtn {
-  left: -5%;
-}
-.carouselRBtn {
-  right: -5%;
-}
+
 
 .carouseLBtnDis {
-  /* left: -5%;
   color: var(--secondary-text);
   border: solid var(--secondary-text) 2px;
   opacity: 0.8;
-  cursor: not-allowed; */
+  cursor: not-allowed;
 }
 
-.carouselRtnDis {
-  /* right: -5%;
+.carouselRBtnDis {
   color: var(--secondary-text);
   border: solid var(--secondary-text) 2px;
   opacity: 0.8;
-  cursor: not-allowed; */
+  cursor: not-allowed;
 }
 
 .foolingBtn {
@@ -384,7 +424,7 @@
   .carouseLBtn,
   .carouselRBtn,
   .carouseLBtnDis,
-  .carouselRtnDis {
+  .carouselRBtnDis {
     /* display: none !important; */
   }
 
@@ -393,7 +433,7 @@
     left: -10%;
   }
 
-  .carouselRtnDis,
+  .carouselRBtnDis,
   .carouselRBtn {
     right: -10%;
   }
