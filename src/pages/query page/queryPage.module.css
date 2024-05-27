@@ -215,7 +215,8 @@
   /* margin-left: 1.5rem; */
   margin-bottom: 4rem;
 }
-.newQuestion a{
+.subNewQuestion {
+
   width: 100%;
   background-color: var(--light-blue);
   padding: 1.3rem;
@@ -238,6 +239,7 @@
   width: 60%;
   aspect-ratio: 1/1;
   margin: auto;
+  cursor: pointer;
 }
 
 .submitButton img {

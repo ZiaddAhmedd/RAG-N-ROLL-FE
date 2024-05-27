@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="RAGAPP">
       <div className="infiniteScroll">
-        <InfiniteScrollingBanner innerText="This is a test" />
+        <InfiniteScrollingBanner innerText="Let's Roll" />
       </div>
       <div className="pages">
         <Routes className="pages">

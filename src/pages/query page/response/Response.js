@@ -64,7 +64,6 @@ function Response(props) {
             doc: doc,
             ourModel: props.ourModel,
           }).then((res) => {
-            console.log(res.data);
             setAnswer(res.data.QA);
           });
           

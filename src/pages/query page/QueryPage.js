@@ -114,11 +114,10 @@ const QueryPage = () => {
         query: queryInput,
         ids: ids,
       });
-      console.log(response.data.docs);
       setOutput(response.data.docs);
       toast.promise(getImages(queryInput), {
         loading: "Retrieving images from database...",
-        success: "Retrieved successfully",
+        success: "Images Retrieved",
         error: "Error while Retrieving images...",
       });
     } catch (err) {}
@@ -129,14 +128,10 @@ const QueryPage = () => {
       const response = await axios.post(routes.retrieveImgs, {
         query: queryInput,
       });
-      console.log(response.data);
       setImages(response.data.urls);
     } catch (err) {}
   }
 
-  useEffect(() => {
-    console.log("ourModel: " + ourModel);
-  }, [ourModel]);
 
   return (
     <div
@@ -187,9 +182,9 @@ const QueryPage = () => {
                 <div style={{ marginTop: "7rem"}}>
                 <div className={classes.newQuestion}>
                 {!openSideBar?
-                  <a href="/askQuestion" > New Question</a>
+                  <a href="/askQuestion" className={classes.subNewQuestion}> New Question</a>
                   :<>
-                  <div className={classes.newQuestionSmall}><AddIcon sx={{fontSize:'3rem'}} data-tooltip-id="my-tooltip" data-tooltip-content="New Question"/></div>
+                  <a href="/askQuestion" className={classes.newQuestionSmall}><AddIcon sx={{fontSize:'3rem'}} data-tooltip-id="my-tooltip" data-tooltip-content="New Question"/></a>
                   </>
                 }
                 </div>
@@ -266,7 +261,7 @@ const QueryPage = () => {
                   <p>
                     <ReactTyped
                       strings={[query]}
-                      typeSpeed={50}
+                      typeSpeed={25}
                       onComplete={(self) => {
                         setSkeleton(true);
                         self.cursor.remove();
@@ -298,7 +293,7 @@ const QueryPage = () => {
                     ) : null
                   )}
                   <div className={classes.switchingButtons}>
-                  <button onClick={() => setCurrentDocIdx(currentDocIdx - 1)} 
+                  <button onClick={() => setCurrentDocIdx(currentDocIdx - 1)} disabled={currentDocIdx === 0}
                    data-tooltip-id="switch-tooltip" data-tooltip-content="Another Response">
                     <ArrowBackIosNewIcon className={currentDocIdx === 0? classes.carouseLBtnDis: classes.carouseLBtn}/>
                   </button>

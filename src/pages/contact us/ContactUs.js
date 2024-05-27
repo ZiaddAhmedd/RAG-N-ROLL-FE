@@ -17,7 +17,6 @@ function ContactUs() {
   };
 
   function handleSubmit(data, { setErrors }) {
-    console.log(data);
   }
 
   const subject = ["subject1", "subject2", "subject3"];
