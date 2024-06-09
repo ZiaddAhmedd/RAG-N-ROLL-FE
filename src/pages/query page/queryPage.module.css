@@ -22,6 +22,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   z-index: 1;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .scrollToBottom:hover {
@@ -184,9 +185,9 @@
   border-radius: 1.5rem;
   padding-left: 2.5rem;
   border: none;
-  background-color: var(--inputBG);
+  background-color: rgba(219, 230, 228, 0.948);
   font-size: var(--lengthM3);
-  color: var(--font-color);
+  color: var(--white);
   outline: none;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -195,7 +196,8 @@
 
 
 .inputField::placeholder {
-  color: var(--placeHolder);
+  color: var(--white);
+  opacity: 0.5;
   pointer-events: none;
 }
 
