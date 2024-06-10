@@ -349,7 +349,7 @@
   border: solid 0.2rem rgba(18, 130, 178, 0.2);
   max-width: 90rem;
   padding: 3rem;
-  height: 40rem;
+  height: 35rem;
   margin: auto;
   margin-bottom: 5rem;
   -webkit-touch-callout: none;
@@ -362,11 +362,10 @@
 
 
 .carouselImg {
-  width: 25rem;
-  height: 30rem;
+  width: 18rem;
+  height: 23rem;
   object-fit:cover;
   border-radius: 1rem;
-
 }
 
 /* This is the css for alice carousel */
